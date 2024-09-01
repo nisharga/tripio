@@ -6,7 +6,7 @@ const Welcome = () => {
   return (
     <SafeAreaView>
       <Text className="text-blue-500 text-center text-4xl">
-        Welcome To Tripio 🙂
+        Welcome To Tripio 🙂🙂
       </Text>
     </SafeAreaView>
   );
