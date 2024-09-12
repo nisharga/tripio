@@ -2,6 +2,7 @@
 import { SignedIn, SignedOut, useClerk, useUser } from "@clerk/clerk-expo";
 import { Link } from "expo-router";
 import { Button, Text, View } from "react-native";
+import { House } from "lucide-react-native";
 
 export default function Page() {
   const { user } = useUser();
@@ -14,7 +15,6 @@ export default function Page() {
         <Text>Sign In</Text>
       </Link>
       <Button title="log out" onPress={() => signOut()} />
-
       <SignedIn>
         <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
       </SignedIn>
@@ -26,6 +26,8 @@ export default function Page() {
           <Text>Sign Up</Text>
         </Link>
       </SignedOut>
+
+      <House color="#ff0000" size={48} />
     </View>
   );
 }
